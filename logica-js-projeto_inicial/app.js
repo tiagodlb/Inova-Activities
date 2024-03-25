@@ -1,6 +1,7 @@
 alert("Boas vindas ao nosso site!");
 
-const secretNumber = parseInt((Math.random()) * 30 + 1);
+let range = 30;
+const secretNumber = parseInt((Math.random()) * range + 1);
 console.log(secretNumber)
 let numberAttempt = 1;
 game();
@@ -17,7 +18,7 @@ function extra() {
 
 function game() {
     let isTrue = false;
-    let attempt = parseInt(prompt("Escolha um número entre 1 e 30"));
+    let attempt = parseInt(prompt(`Escolha um número entre 1 e ${range}`));
     if (attempt < secretNumber) {
         alert("O seu chute é menor que o número secreto");
         numberAttempt++;
