@@ -1,0 +1,11 @@
+body {
+  background-color: lightslategray;
+}
+button {
+  margin: 2px;
+  padding: 2px;
+}
+
+button:hover {
+  cursor: pointer;
+}
