@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/style.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico" />
+    <title>Desafio 2</title>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>Inscreva-se</h1>
+        <form>
+          <section>
+            <label for="field-name"
+              >Nome Completo
+              <input
+                type="text"
+                placeholder="Nome Completo"
+                id="field-name"
+                name="field-name"
+                value=""
+                required
+                minlength="10"
+                alt="Nome Completo"
+              />
+            </label>
+            <label for="field-email"
+              >Email
+              <input
+                type="email"
+                placeholder="Email"
+                id="field-email"
+                name="field-email"
+                value=""
+                required
+                minlength="10"
+                alt="Email"
+              />
+            </label>
+            <label for="field-cpf"
+              >CPF
+              <input
+                type="number"
+                placeholder="CPF"
+                id="field-cpf"
+                name="field-cpf"
+                value=""
+                required
+                maxlength="11"
+                alt="CPF"
+              />
+            </label>
+            <label for="field-date"
+              >Data de Nascimento
+              <input
+                type="date"
+                placeholder="Data de Nascimento"
+                id="field-date"
+                name="field-date"
+                value=""
+                required
+                alt="Data de Nascimento"
+              />
+            </label>
+            <label for="field-state"
+              >Estado
+              <input
+                type="text"
+                placeholder="Estado"
+                id="field-state"
+                name="field-state"
+                value=""
+                required
+                alt="Estado"
+              />
+            </label>
+            <label for="field-phone"
+              >Telefone
+              <input
+                type="phone"
+                placeholder="Telefone"
+                id="field-phone"
+                name="field-phone"
+                value=""
+                required
+                minlength="10"
+                alt="Telefone"
+              />
+            </label>
+            <label for="field-address"
+              >Endereço
+              <input
+                type="text"
+                placeholder="Endereço"
+                id="field-address"
+                name="field-address"
+                value=""
+                required
+                minlength="10"
+                alt="Endereço"
+              />
+            </label>
+            <label for="field-city"
+              >Cidade
+              <input
+                type="text"
+                placeholder="Cidade"
+                id="field-city"
+                name="field-city"
+                value=""
+                required
+                minlength="3"
+                alt="Cidade"
+              />
+            </label>
+            <div class="documents">
+              <label for="field-identity-doc">
+                Documento de Identidade
+                <div>
+                  <img
+                    src="assets/upload.svg"
+                    width="30"
+                    height="30"
+                    alt="Logo do Trilhas Inova Imaranhão"
+                  />
+                  Selecionar
+                  <input
+                    type="file"
+                    id="field-file-identity"
+                    name="identityfile"
+                    accept="image/*"
+                    alt="Botão para colocar a foto do documento de Identidade"
+                    required
+                  />
+                </div>
+              </label>
+              <label for="field-residence-doc">
+                Comprovante de Residência
+                <div>
+                  <img
+                    src="assets/upload.svg"
+                    width="30"
+                    height="30"
+                    alt="Logo do Trilhas Inova Imaranhão"
+                  />
+                  Selecionar
+                  <input
+                    type="file"
+                    id="field-file-residence"
+                    name="residencefile"
+                    accept="image/*"
+                    alt="Botão para colocar a foto do comprovante de residencência"
+                    required
+                  />
+                </div>
+              </label>
+            </div>
+            <p><b>*Atenção: todos os campos são obrigatórios</b></p>
+            <div class="button-container">
+              <button type="reset" name="cancel" class="cancelbtn">Cancelar</button>
+              <button type="submit" name="submit" class="submitbtn">Enviar</button>
+            </div>
+          </section>
+        </form>
+      </article>
+    </main>
+    <img
+      src="assets/Design sem nome (1) 1.svg"
+      width="640"
+      height="640"
+      alt="Logo do Trilhas Inova Imaranhão"
+    />
+  </body>
+</html>
