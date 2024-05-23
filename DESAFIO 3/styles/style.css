@@ -1,0 +1,187 @@
+body {
+  font-family: 'Do Hyeon', sans-serif;
+  background-image: url(/assets/bg-codigo.svg);
+  background-color: #2b2b2b;
+  color: #f6f6f6;
+}
+
+header {
+  padding: 3.125em 0 10em 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  align-items: center;
+  color: #c2e7d9;
+}
+
+nav section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.3rem;
+}
+
+a:link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #c2e7d9;
+  transition: text-decoration-color 300ms, text-underline-offset 300ms;
+}
+
+a:link.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 3px;
+  text-underline-position: under;
+  font-size: 1.6rem;
+  color: #c2e7d9;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #c2e7d9;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 3px;
+  text-underline-position: under;
+}
+
+a:active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 3px;
+  text-underline-position: under;
+}
+
+main {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  line-height: 2.25rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 50%;
+  height: auto;
+}
+
+article section {
+  display: flex;
+  flex-direction: column;
+}
+
+article section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+h2 {
+  font-size: 2.25rem;
+  margin-bottom: 32px;
+}
+
+h2 b {
+  color: #c2e7d9;
+}
+
+button {
+  border: 2px solid #c2e7d9;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  color: #f6f6f6;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  font-size: 1.25rem;
+  border-radius: 3%;
+  width: 50%;
+}
+
+button:hover {
+  background-color: #56939c;
+}
+
+button img {
+  width: 10%;
+  height: auto;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+img {
+  width: 70%;
+  height: auto;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: #c2e7d9;
+  margin: 5rem 0 0.5rem 0;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+footer a {
+  width: 17%;
+  height: auto;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+footer p {
+  margin-top: 1em;
+  color: #c2c2c2;
+}
+
+/* Generical Google Icon Class */
+.material-symbols-outlined {
+  font-size: 1.27rem;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 100;
+}
+
+/* Google Font Classes */
+.do-hyeon-regular {
+  font-family: 'Do Hyeon', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

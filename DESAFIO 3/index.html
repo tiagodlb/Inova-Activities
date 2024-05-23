@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Tiago</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <section id="header-container">
+          <span class="material-symbols-outlined"> home </span>
+          <a href="index.html" class="active"> Home </a>
+        </section>
+        <section id="header-container">
+          <span class="material-symbols-outlined"> monitor </span>
+          <a href="habilities.html">Habilidades</a>
+        </section>
+        <section id="header-container">
+          <span class="material-symbols-outlined"> favorite </span>
+          <a href="projects.html">Projetos</a>
+        </section>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <h2>Tiago <b>Batista</b></h2>
+        <section id="desc">
+          <p>
+            Olá, me chamo Tiago! Sou um jovem de 22 anos e sou Estudante da Universidade Federal do
+            Maranhão (UFMA). Atualmente faço Engenharia da computação. Gosto muito de estudar
+            tópicos de computação e de programar!
+          </p>
+          <div>
+            <label> Acesse minhas redes: </label>
+            <button id="btn" onclick="document.location='https://github.com/tiagodlb'">
+              <img src="assets/Logo Github.svg" alt="Logo do Github" />Github
+            </button>
+            <button id="btn" onclick="document.location='https://www.linkedin.com/in/tiagodlb/'">
+              <img src="assets/Logo LinkedIn.svg" alt="Logo do LinkedIn" />LinkedIn
+            </button>
+          </div>
+        </section>
+      </article>
+      <section id="img">
+        <img src="assets/fotoperfil.svg" alt="Foto do Tiago" />
+      </section>
+    </main>
+    <div id="line" class="line"></div>
+    <footer>
+      <a href="https://www.alura.com.br/empresas/include" target="_blank">
+        <img
+          id="img-alura"
+          class="footer"
+          src="assets/Logo Alura Include.svg"
+          alt="Logo Alura Include"
+          loading="lazy"
+        />
+      </a>
+      <p>Desenvolvido por Tiago Batista.</p>
+    </footer>
+  </body>
+</html>
