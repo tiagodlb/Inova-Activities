@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  padding: 3.125em 0 10em 0;
+  padding: 3.125em 0 7em 0;
 }
 
 nav {
@@ -25,6 +25,10 @@ nav section {
   gap: 0.3rem;
 }
 
+.menu {
+  visibility: collapse; /*Hidden menu*/
+}
+
 a:link {
   display: flex;
   justify-content: center;
@@ -41,8 +45,8 @@ a:link.active {
   align-items: center;
   text-decoration: underline;
   text-underline-offset: 6px;
-  text-decoration-thickness: 3px;
-  text-underline-position: under;
+  text-decoration-thickness: 6px;
+  text-underline-position: below;
   font-size: 1.6rem;
   color: #c2e7d9;
 }
@@ -52,18 +56,38 @@ a:visited {
   color: #c2e7d9;
 }
 
-a:hover {
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  text-decoration-thickness: 3px;
-  text-underline-position: under;
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #c2e7d9;
+}
+
+.hover-underline-animation:after {
+  content: ''; /* Add content after the element */
+  position: absolute; /* Position absolute for pseudo-element */
+  width: 100%; /* Full width */
+  transform: scaleX(0); /* Initial scale of 0 for underline effect */
+  height: 6px; /* Height of the underline */
+  bottom: -6px; /* Align to bottom */
+  left: 0; /* Align to left */
+  background-color: #c2e7d9; /* Background color of the underline */
+  transform-origin: bottom right; /* Set transform origin */
+  transition: transform 0.25s ease-out; /* Transition effect for the underline */
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1); /* Scale the underline on hover */
+  transform-origin: bottom left; /* Set transform origin */
+}
+
+.hover-underline-animation:active:after {
+  transform: scaleX(1); /* Scale the underline on hover */
+  transform-origin: bottom left; /* Set transform origin */
 }
 
 a:active {
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  text-decoration-thickness: 3px;
-  text-underline-position: under;
+  text-decoration: none;
+  transition: text-decoration-color 300ms, text-underline-offset 300ms;
 }
 
 main {
@@ -103,6 +127,23 @@ h2 {
   margin-bottom: 32px;
 }
 
+h2::after {
+  content: '|';
+  animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 h2 b {
   color: #c2e7d9;
 }
@@ -124,6 +165,7 @@ button {
   font-size: 1.25rem;
   border-radius: 3%;
   width: 50%;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
 }
 
 button:hover {
@@ -170,6 +212,7 @@ img {
   height: 2px;
   background-color: #c2e7d9;
   margin: 5rem 0 0.5rem 0;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
 }
 
 footer {
@@ -203,4 +246,135 @@ footer p {
   font-family: 'Do Hyeon', sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+@media only screen and (max-width: 700px) {
+  header {
+    padding: 1.125em 0 1em 0;
+    box-shadow: inset 0 3px 2px rgba(0, 0, 0, 0.25), 0 1.5px rgba(255, 255, 255, 0.082);
+  }
+
+  nav {
+    position: relative;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1rem;
+    margin: 1rem;
+  }
+
+  .menu {
+    cursor: pointer;
+    visibility: visible; /*visible mobile menu*/
+  }
+
+  nav section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    gap: 0.3rem;
+  }
+
+  .header-container {
+    display: none;
+  }
+
+  a:link {
+    font-size: 1.2rem;
+  }
+
+  a:link.active {
+    font-size: 1.2rem;
+  }
+
+  main {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: end;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  main section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  article {
+    justify-content: center;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    width: 100%;
+    height: auto;
+  }
+
+  article section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-projects {
+    display: flex;
+    justify-content: center;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    width: 100%;
+    height: auto;
+  }
+
+  footer img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1200px) {
+  main {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  img {
+    width: 75%;
+  }
+
+  .main-projects {
+    display: flex;
+    justify-content: center;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-evenly;
+    gap: 1.2rem;
+    width: 175%;
+    height: auto;
+  }
+
+  footer img {
+    width: 100%;
+  }
 }

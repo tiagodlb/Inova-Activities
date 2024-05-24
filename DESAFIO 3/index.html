@@ -8,6 +8,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet" />
@@ -21,23 +25,24 @@
   <body>
     <header>
       <nav>
-        <section id="header-container">
+        <span class="material-symbols-outlined menu" onclick="showMenu()"> menu </span>
+        <section class="header-container">
           <span class="material-symbols-outlined"> home </span>
-          <a href="index.html" class="active"> Home </a>
+          <a href="index.html" class="hover-underline-animation active"> Home </a>
         </section>
-        <section id="header-container">
+        <section class="header-container">
           <span class="material-symbols-outlined"> monitor </span>
-          <a href="habilities.html">Habilidades</a>
+          <a href="habilities.html" class="hover-underline-animation">Habilidades</a>
         </section>
-        <section id="header-container">
+        <section class="header-container">
           <span class="material-symbols-outlined"> favorite </span>
-          <a href="projects.html">Projetos</a>
+          <a href="projects.html" class="hover-underline-animation">Projetos</a>
         </section>
       </nav>
     </header>
     <main>
       <article>
-        <h2>Tiago <b>Batista</b></h2>
+        <h2 id="index-header"></h2>
         <section id="desc">
           <p>
             Olá, me chamo Tiago! Sou um jovem de 22 anos e sou Estudante da Universidade Federal do
@@ -72,5 +77,6 @@
       </a>
       <p>Desenvolvido por Tiago Batista.</p>
     </footer>
+    <script src="javascript/main.js"></script>
   </body>
 </html>

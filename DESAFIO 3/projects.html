@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Tiago</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -21,23 +22,26 @@
   <body>
     <header>
       <nav>
-        <section id="header-container">
+        <span class="material-symbols-outlined menu" onclick="showMenu()">
+          menu
+          </span>
+        <section class="header-container">
           <span class="material-symbols-outlined"> home </span>
-          <a href="index.html"> Home </a>
+          <a href="index.html" class="hover-underline-animation"> Home </a>
         </section>
-        <section id="header-container">
+        <section class="header-container">
           <span class="material-symbols-outlined"> monitor </span>
-          <a href="habilities.html">Habilidades</a>
+          <a href="habilities.html" class="hover-underline-animation">Habilidades</a>
         </section>
-        <section id="header-container">
+        <section class="header-container">
           <span class="material-symbols-outlined"> favorite </span>
-          <a href="projects.html" class="active">Projetos</a>
+          <a href="projects.html" class="hover-underline-animation active">Projetos</a>
         </section>
       </nav>
     </header>
     <main class="main-projects">
       <article class="article-projects">
-        <h2>Meus <b>Projetos</b></h2>
+        <h2 id="projects-header"></h2>
         <section class="projects" id="desc">
             <a href="https://github.com/tiagodlb/lab-jackcompiler/tree/main" target="_blank">
               <img src="assets/Group 27(1).svg" alt="Logo do Github" />
@@ -63,5 +67,6 @@
       </a>
       <p>Desenvolvido por Tiago Batista.</p>
     </footer>
+    <script src="javascript/main.js"></script>
   </body>
 </html>
