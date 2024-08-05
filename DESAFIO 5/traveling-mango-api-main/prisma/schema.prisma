@@ -1,0 +1,57 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Destiny {
+  id          Int          @id @default(autoincrement()) @map("destiny_id")
+  created_at  DateTime?    @default(now())
+  title       String?      @db.VarChar(256)
+  content     String?      @db.Text
+  imgURL      String?
+  lat         Float?
+  long        Float?
+  favoritedBy Int?
+  Attraction  Attraction[]
+
+  @@index([favoritedBy], map: "destinies_favoritedBy_fkey")
+  @@map("destinies")
+}
+
+model Attraction {
+  id         Int       @id @default(autoincrement()) @map("attraction_id")
+  created_at DateTime? @default(now())
+  title      String    @db.VarChar(256)
+  content    String?   @db.Text
+  imgURL     String?
+  lat        Float?
+  long       Float?
+  destinyId  Int?
+  destiny    Destiny?  @relation(fields: [destinyId], references: [id])
+
+  @@index([destinyId], map: "attractions_destinyId_fkey")
+  @@map("attractions")
+}
+
+model Profile {
+  id      Int     @id @default(autoincrement()) @map("profile_id")
+  bio     String?
+  user_id Int     @unique
+  users   User    @relation(fields: [user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@map("profiles")
+}
+
+model User {
+  id       Int      @id @default(autoincrement()) @map("user_id")
+  name     String   @db.VarChar(256)
+  email    String   @unique @db.VarChar(256)
+  password String   @db.VarChar(256)
+  profiles Profile?
+
+  @@map("users")
+}
