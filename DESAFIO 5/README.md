@@ -3,3 +3,5 @@ deploy link: https://traveling-mango.vercel.app/
 deploylink back: https://traveling-mango-api.onrender.com
 
 Disclaimer Importante: o front foi feito pensando em dispositivos 2xl, mínimo de 1366 x 768 ou superior
+
+**TODAS AS IMAGENS** SÃO GRATUITAS E SOBRE LICENÇA CREATIVE COMMONS
