@@ -30,7 +30,7 @@ POST /register
     - Rota para criar um novo usuario
     - body:{
         "email": "jon@doe.com",
-        "nickname": "JonTheDoe",
+        "name": "JonTheDoe",
         "password": "DonJoe27",
       }
     - response: {}
@@ -72,6 +72,37 @@ GET /destinies
     ]
   }
 ], ...
+```
+```yml 
+POST /destinies
+    - Rota para acessar as informações dos destinos (Não permiti acesso direto a latitude e longitude)
+    - body:{
+    "title": "Santo Amaro",
+    "content": "Santo Amaro do Maranhão é uma cidade charmosa localizada no coração dos Lençóis Maranhenses. É conhecida por suas paisagens deslumbrantes, menos exploradas que as de Barreirinhas, e pela proximidade com as dunas e lagoas do Parque Nacional dos Lençóis Maranhenses. Aqui estão alguns dos principais atrativos de Santo Amaro",
+    "imgURL": "https://images.unsplash.com/photo-1668431397148-21a3dc45a8bb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }
+```
+```yml 
+POST /destinies
+    - Rota para POSTAR as informações dos destinos
+    - body:{
+    "title": "Santo Amaro",
+    "content": "Santo Amaro do Maranhão é uma cidade charmosa localizada no coração dos Lençóis Maranhenses. É conhecida por suas paisagens deslumbrantes, menos exploradas que as de Barreirinhas, e pela proximidade com as dunas e lagoas do Parque Nacional dos Lençóis Maranhenses. Aqui estão alguns dos principais atrativos de Santo Amaro",
+    "imgURL": "https://images.unsplash.com/photo-1668431397148-21a3dc45a8bb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }
+```
+```yml 
+delete /destinies/:id
+    - Rota para deltar as informações dos destinos
+```
+```yml 
+PUT /destinies/:id
+    - Rota para atualizar as informações dos destinos (Não permiti acesso direto a latitude e longitude)
+    - body:{
+    "title": "Santo Amaro",
+    "content": "Santo Amaro do Maranhão é uma cidade charmosa localizada no coração dos Lençóis Maranhenses. É conhecida por suas paisagens deslumbrantes, menos exploradas que as de Barreirinhas, e pela proximidade com as dunas e lagoas do Parque Nacional dos Lençóis Maranhenses. Aqui estão alguns dos principais atrativos de Santo Amaro",
+    "imgURL": "https://images.unsplash.com/photo-1668431397148-21a3dc45a8bb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }
 ```
 ### Attractions
 
