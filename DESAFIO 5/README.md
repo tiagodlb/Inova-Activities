@@ -1,12 +1,9 @@
 <h1 align="center">
     Traveling Mango
 </h1>
-If something is missing please refer to the original files on my repository they follow the same name before the "-main" on filename
 deploy link: https://traveling-mango.vercel.app/
 deploy link back: https://traveling-mango-api.onrender.com
 
-Disclaimer Importante: o front foi feito pensando em dispositivos 2xl, mínimo de 1600 x 768 ou superior
-(F12 + Browser Responsivo -> Simbolo de Celular/Tablet )
 **TODAS AS IMAGENS** SÃO GRATUITAS E SOBRE LICENÇA CREATIVE COMMONS
 <br />
 
