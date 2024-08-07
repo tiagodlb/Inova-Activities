@@ -1,8 +1,8 @@
 <h1 align="center">
-    Traveling Mango
+   🥭 Traveling Mango
 </h1>
-deploy link: https://traveling-mango.vercel.app/
-deploy link back: https://traveling-mango-api.onrender.com
+Link Front: https://traveling-mango.vercel.app/
+Link Back: https://traveling-mango-api.onrender.com
 
 **TODAS AS IMAGENS** SÃO GRATUITAS E SOBRE LICENÇA CREATIVE COMMONS
 <br />
