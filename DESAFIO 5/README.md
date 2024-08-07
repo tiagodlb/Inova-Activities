@@ -108,7 +108,7 @@ PUT /destinies/:id
 
 ```yml 
 GET /attractions
-    - Routa para acessar as informações das atrações em possiveis destinos
+    - Routa para acessar as informações das atrações
     - response:
 [
   {
@@ -122,5 +122,36 @@ GET /attractions
     "destinyId": 19
   }
 ],
+```
+```yml 
+POST /attractions
+    - Rota para acessar as informações das atrações (Não permiti acesso direto a latitude e longitude)
+    - body:{
+    "title": "Lençois Maranhenses",
+    "content": "Um dos destinos mais espetaculares do Brasil, os Lençóis Maranhenses são uma vasta extensão de dunas de areia branca, pontuadas por lagoas de água doce que se formam durante a estação chuvosa. Este cenário único e surreal atrai visitantes de todo o mundo, oferecendo uma experiência incomparável de contato com a natureza.",
+    "imgURL": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Len%C3%A7%C3%B3is_Maranhenses._01.jpg",
+  }
+```
+```yml 
+POST /attractions
+    - Rota para POSTAR as informações das atrações
+    - body:{
+    "title": "Lençois Maranhenses",
+    "content": "Um dos destinos mais espetaculares do Brasil, os Lençóis Maranhenses são uma vasta extensão de dunas de areia branca, pontuadas por lagoas de água doce que se formam durante a estação chuvosa. Este cenário único e surreal atrai visitantes de todo o mundo, oferecendo uma experiência incomparável de contato com a natureza.",
+    "imgURL": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Len%C3%A7%C3%B3is_Maranhenses._01.jpg",
+  }
+```
+```yml 
+delete /attractions/:id
+    - Rota para deltar as informações dos destinos
+```
+```yml 
+PUT /attractions/:id
+    - Rota para atualizar as informações das atrações (Não permiti acesso direto a latitude e longitude)
+    - body:{
+    "title": "Lençois Maranhenses",
+    "content": "Um dos destinos mais espetaculares do Brasil, os Lençóis Maranhenses são uma vasta extensão de dunas de areia branca, pontuadas por lagoas de água doce que se formam durante a estação chuvosa. Este cenário único e surreal atrai visitantes de todo o mundo, oferecendo uma experiência incomparável de contato com a natureza.",
+    "imgURL": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Len%C3%A7%C3%B3is_Maranhenses._01.jpg",
+  }
 ```
 
